@@ -2,11 +2,11 @@
 
 Here is a simple program to make a TCP connection in GO. 
 
-#To run the program
+# To run the program
 ```console
 go run main.go
 ```
-#To make a connection with the server open another terminal and run the following command
+To make a connection with the server open another terminal and run the following command
 ```console
 telnet localhost 3000
 ```
