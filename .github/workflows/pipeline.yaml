@@ -38,7 +38,7 @@ jobs:
 
     - name: Tag Docker image
       run: |
-        docker tag awaismohammad23/tcpconnection:latest awaismohammad23/tcpconnection:custom-tag
+        docker tag awaismohammad23/tcpconnection awaismohammad23/tcpconnection:custom-tag
 
     - name: Push Docker image to Docker Hub
       run: |
