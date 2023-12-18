@@ -38,10 +38,11 @@ jobs:
 
     - name: Tag Docker image
       run: |
-        docker tag awaismohammad23/tcpconnection:latest awaismohammad23/tcpconnection:latest
+        docker tag awaismohammad23/tcpconnection:latest awaismohammad23/tcpconnection:custom-tag
 
     - name: Push Docker image to Docker Hub
       run: |
         echo "${{ secrets.DOCKER_HUB_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_HUB_USERNAME }}" --password-stdin
+        docker push awaismohammad23/tcpconnection:latest
         docker push awaismohammad23/tcpconnection:${{ github.sha }}
         docker push awaismohammad23/tcpconnection:custom-tag
