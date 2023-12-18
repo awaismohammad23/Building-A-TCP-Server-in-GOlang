@@ -8,7 +8,7 @@ WORKDIR /app
 COPY . .
 
 # Build the Go program
-RUN go mod init github.com/awaismohammad23/tcpconnection && go build -o myapp
+RUN go build -o myapp
 
 # Expose the port on which your Go program listens
 EXPOSE 3000
