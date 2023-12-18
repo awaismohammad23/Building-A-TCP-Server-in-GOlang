@@ -1,6 +1,6 @@
 # Building-A-TCP-Server-in-GOlang
 
-Here is a simple program to make a TCP connection in GO. 
+Here is a simple program to make a TCP connection in GO. This program demonstrates a simple TCP connection between server and a client. You can add as many clients as possible in the following. This program will simply let you send a message from the client to the server and the server will respond whether it received the message from the client or not.
 
 # How to run the program?
 
