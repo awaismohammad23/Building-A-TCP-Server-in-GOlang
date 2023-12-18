@@ -20,5 +20,5 @@ You can add as many clients as you can using this. You can send messagefrom the 
 
 # To terminate the program
 ```console
-Tyoe CTRL + C
+Type (CTRL + C) in the server program to exit
 ```
