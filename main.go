@@ -78,6 +78,8 @@ func (s *Server) readloop(conn net.Conn) {
 			From:    conn.RemoteAddr().String(),
 			payLoad: buf[:n],
 		}
+
+		conn.Write([]byte("Message received :)\n"))
 	}
 }
 
