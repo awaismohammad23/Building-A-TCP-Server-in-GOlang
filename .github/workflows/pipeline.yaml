@@ -39,5 +39,6 @@ jobs:
     - name: Push Docker image to Docker Hub
       run: |
         echo "${{ secrets.DOCKER_HUB_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_HUB_USERNAME }}" --password-stdin
+        docker tag awaismohammad23/tcpconnection:latest
         docker push awaismohammad23/tcpconnection:latest
         docker push awaismohammad23/tcpconnection:${{ github.sha }}
