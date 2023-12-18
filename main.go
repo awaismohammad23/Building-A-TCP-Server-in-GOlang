@@ -32,6 +32,8 @@ func (s *Server) Start() error {
 	defer ln.Close()
 	s.ln = ln
 
+	go s.acceptloop()
+
 	<-s.QuitChanel
 
 	return nil
@@ -45,10 +47,13 @@ func (s *Server) acceptloop() {
 			fmt.Println("accept error", err)
 			continue
 		}
+
+		fmt.Println("accepted connection from %s", conn.RemoteAddr())
 		go s.readloop(conn)
 	}
 }
 
+//function to read the message from the client
 func (s *Server) readloop(conn net.Conn) {
 
 	defer conn.Close()
