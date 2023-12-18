@@ -16,7 +16,7 @@ To make a connection with the server open another terminal and run the following
 telnet localhost 3000
 ```
 This will create a connection between the server and a client.
-You can add as many clients as you can using this. You can send messagefrom the client to the server as many as you can.
+You can add as many clients as you can using this. You can send message from the client to the server as many as you can.
 
 # To terminate the program
 ```console
