@@ -20,11 +20,11 @@ jobs:
 
     - name: Build Docker image
       run: |
-        go mod init github.com/awaismohammad23/tcpconnection
+        go mod init github.com/${{ secrets.DOCKER_HUB_USERNAME }}/tcpconnection
         go build -o myapp
-        docker build -t awaismohammad23/tcpconnection:latest -t awaismohammad23/tcpconnection:${{ github.sha }} .
+        docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/tcpconnection:latest -t ${{ secrets.DOCKER_HUB_USERNAME }}/tcpconnection:${{ github.sha }} .
 
     - name: Push Docker image to Docker Hub
       run: |
         echo "${{ secrets.DOCKER_HUB_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_HUB_USERNAME }}" --password-stdin
-        docker push awaismohammad23/tcpconnection:latest
+        docker push ${{ secrets.DOCKER_HUB_USERNAME }}/tcpconnection:latest
